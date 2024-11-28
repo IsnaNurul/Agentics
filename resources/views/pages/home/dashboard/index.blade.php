@@ -12,11 +12,17 @@
     <div class="main-content mb-5">
         <div class="row">
             <div class="main-content">
-                <div class="row" id="web-analytics" style="display: flex">
+                <div class="row" id="web-analytics" style="display: none">
                     @include('pages.home.dashboard.template-dashboard.web-analytics')
                 </div>
                 <div class="row" id="digital-marketing" style="display: none">
                     @include('pages.home.dashboard.template-dashboard.digital-marketing')
+                </div>
+                <div class="row" id="facebook-ads" style="display: flex">
+                    @include('pages.home.dashboard.template-dashboard.facebook-ads')
+                </div>
+                <div class="row" id="facebook-ads" style="display: none">
+                    @include('pages.home.dashboard.template-dashboard.facebook')
                 </div>
             </div>
         </div>
@@ -25,6 +31,7 @@
 
 @push('scripts')
     <script src="assets/js/analytics-init.min.js"></script>
+    <script src="assets/js/dashboard-init.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
