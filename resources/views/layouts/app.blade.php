@@ -54,8 +54,8 @@
     <!--! ================================================================ !-->
     <!--! [Start] Main Content !-->
     <!--! ================================================================ !-->
-    <main class="nxl-container apps-container">
-        <div class="nxl-content without-header nxl-full-content">
+    <main class="nxl-container {{ Request::is('settings*') ? 'apps-container' : '' }} ">
+        <div class="nxl-content {{ Request::is('settings*') ? 'without-header nxl-full-content' : '' }} ">
             <!-- [ page-header ] start -->
             @yield('page-header')
             <!-- [ page-header ] end -->
